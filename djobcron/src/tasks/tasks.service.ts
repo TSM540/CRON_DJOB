@@ -7,7 +7,13 @@ import { Task, ExecutionStatus } from '@prisma/client';
 export class TasksService {
   constructor(private prisma: PrismaService) {}
 
-  async createTask(data: Omit<Task, 'id' | 'isExecuted'>): Promise<Task> {
+  async createTask(data: Omit<Task, 'isExecuted'>): Promise<Task> {
+    const {id } = data;
+    
+    const result = await this.prisma.task.findUnique({ where: { id } });
+    if (result) {
+      throw new NotFoundException(`Task with ID ${id} already exists`);
+    }
     return this.prisma.task.create({ data: { ...data, isExecuted: ExecutionStatus.Idle } });
   }
 

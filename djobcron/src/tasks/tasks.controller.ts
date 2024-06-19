@@ -8,7 +8,7 @@ export class TasksController {
   constructor(private tasksService: TasksService) {}
 
   @Post()
-  async createTask(@Body() taskData: Omit<Task, 'id' | 'isExecuted'>): Promise<Task> {
+  async createTask(@Body() taskData: Omit<Task,  'isExecuted'>): Promise<Task> {
     return this.tasksService.createTask(taskData);
   }
 
