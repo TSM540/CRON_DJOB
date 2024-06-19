@@ -7,7 +7,8 @@ cd djobcron \
 npm i \
 npm run start:dev \
 
-faites les requettes sous postman :)
+faites les requettes sous postman :) \
+JE TIENS A PRECISER QUE C'EST LA PREMIERE FOIS que j'utilise nestjs
 ## 2. Les liens 
 On a 
 >>>https://localhost:3000 \
