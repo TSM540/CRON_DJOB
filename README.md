@@ -5,8 +5,9 @@ Tout est niquel, rajoutez un fichier.env en rajoutant DATABASE_URL="YOUR DB"
 ## Initialisation : 
 cd djobcron \
 npm i \
-npm run start:dev
+npm run start:dev \
 
+faites les requettes sous postman :)
 ## 2. Les liens 
 On a 
 >>>https://localhost:3000 \
